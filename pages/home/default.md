@@ -10,5 +10,5 @@ Caution! - All documentation found here is community provided and should be trea
 ## [Voron 2.1 Supplement](https://www.voron.dev/home/voron-2-1)
 
 
-[Voron Owners Area](https://www.voron.dev/voc)
+
  
