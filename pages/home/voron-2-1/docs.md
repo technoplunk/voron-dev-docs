@@ -7,7 +7,7 @@ taxonomy:
 visible: true
 ---
 
-# [Voron 2.1 Supplement](https://hackmd.io/BXH4hhtYTO-3TY32TRfDKQ?both)
+# [Voron 2.1 Supplement](https://www.voron.dev/home/voron-2-1)
 
 Voron 2.1 Updates, tips and trick, etc.
 
