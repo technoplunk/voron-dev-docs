@@ -32,4 +32,4 @@ Links
 - [Calibration](https://hackmd.io/iOSF7FGuRg-h8lx77XTsqQ)
 - [Troubleshooting](https://hackmd.io/uRbAIpFtT3uDox42aL9djw)
 - [Photo tour of printer](https://hackmd.io/sDqmliAIRRyFXOnwiq8Rng)
-###### tags: `Voron` `Book`
+###### tags: `Voron`
