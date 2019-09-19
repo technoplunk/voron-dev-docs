@@ -7,7 +7,6 @@ taxonomy:
 visible: true
 ---
 
-
 ### 
 ### Voron 2.1 Updates, tips and trick, etc.
 
@@ -21,9 +20,6 @@ visible: true
 :::info
 All information collected here is currently non-offical and subject to change!
 :::
-
-## Contents
-[Toc]
 
 Links
 ---
