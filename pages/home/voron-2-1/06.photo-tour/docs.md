@@ -1,5 +1,5 @@
 ---
-title: 'Photo Tour'
+title: 'Build Photos'
 date: '18:59 19-09-2019'
 taxonomy:
     category:
