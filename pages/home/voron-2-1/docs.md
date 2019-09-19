@@ -1,5 +1,5 @@
 ---
-title: 'Voron 2.1'
+title: 'Voron 2.1 Supplement'
 date: '18:39 19-09-2019'
 taxonomy:
     category:
@@ -7,9 +7,9 @@ taxonomy:
 visible: true
 ---
 
-# [Voron 2.1 Supplement](https://www.voron.dev/home/voron-2-1)
 
-Voron 2.1 Updates, tips and trick, etc.
+### 
+### Voron 2.1 Updates, tips and trick, etc.
 
 ![](https://i.imgur.com/aPME4Hj.png)
 
