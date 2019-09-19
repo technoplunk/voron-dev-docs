@@ -5,6 +5,11 @@ taxonomy:
     category:
         - gallery
 visible: true
+unitegallery:
+    gallery_theme: tiles
 ---
 
 Photos of prints from Voron Printers
+
+### This page might break - I am trying out different gallery plugins
+
