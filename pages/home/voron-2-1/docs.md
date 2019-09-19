@@ -8,7 +8,7 @@ visible: true
 ---
 
 ### 
-### Voron 2.1 Updates, tips and trick, etc.
+### Voron 2.1 Updates, tips and tricks, etc.
 
 ![](https://i.imgur.com/aPME4Hj.png)
 
