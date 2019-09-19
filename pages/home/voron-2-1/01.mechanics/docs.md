@@ -9,7 +9,7 @@ visible: true
 
 # Voron Mechanics
 ## Content
-[MINITOC]
+[TOC]
 ## Basics
 Generally, follow the manual when building the Voron, when in doubt either check the [Voron Manual Errata](/ej9YJYuDRgKU3fMNmbGi_g) or ask for advice in the [Voron Discord](https://discord.gg/wfwFKuf)
 
