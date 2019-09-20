@@ -11,7 +11,7 @@ visible: true
 ## Content
 [TOC]
 ## Basics
-Generally, follow the manual when building the Voron, when in doubt either check the [Voron Manual Errata](/ej9YJYuDRgKU3fMNmbGi_g) or ask for advice in the [Voron Discord](https://discord.gg/wfwFKuf)
+Generally, follow the manual when building the Voron, when in doubt either check the [Voron Manual Errata](https://www.voron.dev/home/voron-2-1/2-1-manual-errata) or ask for advice in the [Voron Discord](https://discord.gg/wfwFKuf)
 
 A few useful tips:
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on an sometimes hard to identify!
@@ -59,9 +59,8 @@ A few useful tips:
 ## Sourcing
 Follow the [Sourcing Guidlines](https://hackmd.io/P_XMpxHGRCe9__FdwCZJsg?view#Sourcing) and the [Official Sourcing Sheet](https://docs.google.com/spreadsheets/d/1QS80JOHcgBIABJrAD7sIsVr5nARIzHsFrJnI4P4npgs/) to buy Voron parts.
 
-:::info
-The sourcing sheet is copy protected on purpose to prevent outdated copies. This way the development team can guarantee an up-to-date sheet
-:::
+!! The sourcing sheet is copy protected on purpose to prevent outdated copies. This way the development team can guarantee an up-to-date sheet
+
 
 Make sure to buy Arduino Megas with ATMega16U2 Chips to ease your Klipper installation. Many cheap china clones use CH340 with a standard ID that will make Klipper installation less convenient.
 
@@ -107,9 +106,8 @@ With 24V you either need to source
 * 24V heater for the hotend
 * (Optional) an appropriate step-down to power the RPi
 
-:::info
-24V fans for hotend cooling (e.g. Delta, Sunon) and parts cooling (e.g. 3dsway via Aliexpress) are available. However, no 24V electronics fan alternative is known!
-:::
+! 24V fans for hotend cooling (e.g. Delta, Sunon) and parts cooling (e.g. 3dsway via Aliexpress) are available. However, no 24V electronics fan alternative is known!
+
 
 
 ### Alternative controller setups
@@ -119,9 +117,8 @@ Instead of 2x RAMPS with Arduino MEGAs some Vorons run alternative MCUs either f
 * MKS Gen 1.4
 
 
-:::warning
-Alternative controllers are not supported by the dev team! You are on your own to figure out the klipper config. Still, community members may share their configuration.
-:::
+!! Alternative controllers are not supported by the dev team! You are on your own to figure out the klipper config. Still, community members may share their configuration.
+
 
 ### Unsupported controller setups
 * SKR Mini E3 : This board has serious design flaws. The board does not feature this spec GLCD for LCD panel. Poor motor layout and small copper cooling.

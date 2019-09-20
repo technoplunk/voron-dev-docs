@@ -17,9 +17,9 @@ visible: true
 
 
 # Disclaimer
-:::info
-All information collected here is currently non-offical and subject to change!
-:::
+
+!! All information collected here is currently non-offical and subject to change!
+
 
 Links
 ---

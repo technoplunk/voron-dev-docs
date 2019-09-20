@@ -49,9 +49,8 @@ A few useful tips:
 ## Sourcing
 Follow the [Sourcing Guidlines](https://hackmd.io/P_XMpxHGRCe9__FdwCZJsg?view#Sourcing) and the [Official Sourcing Sheet](https://docs.google.com/spreadsheets/d/1QS80JOHcgBIABJrAD7sIsVr5nARIzHsFrJnI4P4npgs/) to buy Voron parts.
 
-:::info
-The sourcing sheet is copy protected on purpose to prevent outdated copies. This way the development team can guarantee an up-to-date sheet
-:::
+! The sourcing sheet is copy protected on purpose to prevent outdated copies. This way the development team can guarantee an up-to-date sheet
+
 
 ## Printing Voron parts
 Follow the [Printing Guideline](https://hackmd.io/P_XMpxHGRCe9__FdwCZJsg?view#What-are-the-recommended-print-settings-for-Voron-parts) when printing Voron parts or apply for Print It Forward (PIF) via [Voron Discord](https://discord.gg/wfwFKuf) to get a quality controlled community printed set.
@@ -77,9 +76,8 @@ Voron 2.1 uses dampener on every stepper driver to reduce the amount of vibratio
 * Use standard foam tape applied to the panels (1mm thick)
 * Apply foam tape to the panel anchors
 
-:::info
-Note that the foam tape will add thickness such that panel anchors may need modification
-:::
+! Note that the foam tape will add thickness such that panel anchors may need modification
+
 
 ### Coroplast panel holders / clips for the bed panel
 Take a look at the [Github mods folder](https://github.com/VoronDesign/Voron-2/tree/master/Mods). Several users designed holding clips for the coroplast panel to achive a better look

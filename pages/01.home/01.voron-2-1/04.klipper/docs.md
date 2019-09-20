@@ -10,12 +10,12 @@ visible: true
 Voron Klipper
 ===
 
-:::info
-Always check the latest Klipper documentation for feature updates: 
-* [Klipper Docs](https://github.com/KevinOConnor/klipper/tree/master/docs)
-* [examples.cfg](https://github.com/KevinOConnor/klipper/blob/master/config/example.cfg)
-* [examples-extra.cfg](https://github.com/KevinOConnor/klipper/blob/master/config/example-extras.cfg)
-:::
+
+!! Always check the latest Klipper documentation for feature updates: 
+!! * [Klipper Docs](https://github.com/KevinOConnor/klipper/tree/master/docs)
+!! * [examples.cfg](https://github.com/KevinOConnor/klipper/blob/master/config/example.cfg)
+!! * [examples-extra.cfg](https://github.com/KevinOConnor/klipper/blob/master/config/example-extras.cfg)
+ 
 
 
 ## Content
@@ -27,22 +27,19 @@ Always check the latest Klipper documentation for feature updates:
 Latest stock config is found on Github:
 [Voron Klipper Config](https://github.com/VoronDesign/Voron-2/tree/master/Firmware/Klipper/Voron_2.1/Klipper/Configurations/Wired_Per_Manual)
 
-:::warning
-Throughout this document it is assumed that you have succesfully installed Klipper following the Klipper install guides
+!! Throughout this document it is assumed that you have succesfully installed Klipper following the Klipper install guides
+!!
+!!https://github.com/KevinOConnor/klipper/blob/master/docs/Installation.md
+!!https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
 
-https://github.com/KevinOConnor/klipper/blob/master/docs/Installation.md
-https://github.com/KevinOConnor/klipper/blob/master/docs/Config_checks.md
-:::
 
-:::info
-Throughout this process - if you make changes to the config file - you must issue a firmware_restart command or restart the klipper service for it to take effect
-:::
+!!! Throughout this process - if you make changes to the config file - you must issue a firmware_restart command or restart the klipper service for it to take effect
 
 
 ### Items you need to update
 
 Arduino paths                          [mcu](#MCU-definitions) section
- Thermistor types                      [extruder](#Extruder-Settings) and [heater_bed]() sections
+ Thermistor types                      [extruder](https://www.voron.dev/home/voron-2-1/klipper#extruder-settings) and [heater_bed]() sections
  See 'sensor types' list at end of file
  
  FSR switch (z endstop) location       [homing_override](#Homing-Override) section
@@ -53,7 +50,7 @@ Arduino paths                          [mcu](#MCU-definitions) section
  Fine tune E steps                     [extruder](#Extruder-Settings) section
 
 
-### MCU definitions
+### MCU definitions <a id="MCU-definitions"></a>
 
 Each RAMPS 1.4 board is placed onto an Arduino Mega controller. 
 When you install Klipper you will flash the Klipper code onto both Arduinos. We need to find the USB paths of your Arduinos and tell Klipper where to find them on startup. 
@@ -76,7 +73,7 @@ Arduino__www.arduino.cc__0042_55737313631351603928-if00
 These are the ID's we need to insert into the config file. To determine which Arduino is which it is easiest to plug in the XYE Arduino first - do the 'ls' command - and then plugin the second Arduino and grab the second ID using 'ls'. 
 
 
-```
+```py
 [mcu]
 # Mcu for X/Y/E steppers
 serial: /dev/serial/by-id/Arduino__www.arduino.cc__0042_55737313631351601271-if00
@@ -127,10 +124,8 @@ pin_map: arduino
 restart_method: arduino
 ```
 
-:::danger
- If you use by-path you must always plug the same Arduino into the Same USB port.   Plugging it into a different port will change it’s path, possibly flipping your MCU X with MCU Z
-
-:::
+!! Danger
+!! If you use by-path you must always plug the same Arduino into the Same USB port.   Plugging it into a different port will change it’s path, possibly flipping your MCU X with MCU Z
 
 ### Printer definitions
 
@@ -172,9 +167,9 @@ STEPPER_BUZZ STEPPER=stepper_y
 
 This will move each motor back and forth a few times. If you have the motors the wrong way around - you can either power off and switch the connections on the RAMPS board - or switch all the PIN definitions in the config to effectively 'swap' the motors. 
 
-:::danger
-ALWAYS power off the printer when connecting or disconnecting stepper motors from the RAMPS board or you will damage the stepper driver chip
-:::
+!! Danger
+!!ALWAYS power off the printer when connecting or disconnecting stepper motors from the RAMPS board or you will damage the stepper driver chip
+
 
 Next you need to check the movement. To begin with you do not want to run a home sequence as your motors might be moving in the wrong directions. To test direction - manually move the toolhead near the center of your bed. Then run the set_kinematics command to force the printer to the location you are at. 
 
@@ -182,14 +177,12 @@ Next you need to check the movement. To begin with you do not want to run a home
 SET_KINEMATIC_POSITION X=125 Y=125 Z=100
 ```
 
-:::info
-You may need to add the following into your config for set_kinematic_position to work
-
-```
-[force_move]
-enable_force_move: true
-```
-:::
+!!! You may need to add the following into your config for set_kinematic_position to work
+!!!
+!!! ```
+!!! [force_move]
+!!! enable_force_move: true
+!!! ```
 
 Now you can use the jog controls in Octoprint to move the toolhead in X and Y - just use small moves here. 
 
@@ -249,35 +242,26 @@ endstop_pin: ^!ar2
 
 If the state does not change when pressed - you need to check all your wiring and confirm that you are plugged into the correct endstop pins on the MCU X/Y board. 
 
-:::danger
-You should also confirm that your FSR pin is triggering for Z-Min at this stage. You must also confirm that your Z motors are moving in the right direction. See [Z Steppers](#Z-Steppers)
-:::
+!! You should also confirm that your FSR pin is triggering for Z-Min at this stage. You must also confirm that your Z motors are moving in the right direction. See [Z Steppers](#Z-Steppers)
 
 Now we will do the first homing sequence. Get the toolhead near the center of the bed and raise the gantry high so you have time to stop it if something goes wrong. 
 
-:::danger
-Be ready to press emergency stop or power off your printer at this point
-:::
+!! Be ready to press emergency stop or power off your printer at this point
 
 Run G28 to start homing. First the toolhead should move right towards the X endstop switch, then move back towards the Y endstop switch and finally down towards the Z endstop switch.
 
-:::danger
-At this point we have not configured the position of the FSR switch - so you will be manually pressing it to stop the gantry moving down
-:::
+!! At this point we have not configured the position of the FSR switch - so you will be manually pressing it to stop the gantry moving down
 
 ```
 G28
 ```
-:::info
-As the toolhead moves right - manually press the X endstop switch twice to stop it.
-:::
-:::info
-As the toolhead moves back - manually press the Y endstop switch twice to stop it.
-:::
-:::info
-As the gantry moves dowm - manually press the Z FSR endstop switch twice to stop it.
-:::
 
+!!! As the toolhead moves right - manually press the X endstop switch twice to stop it.
+
+!!! As the toolhead moves back - manually press the Y endstop switch twice to stop it.
+
+!!! As the gantry moves dowm - manually press the Z FSR endstop switch twice to stop it.
+ 
 Once you are happy that the movement is stopping when the switch is pressed - run G28 again.
 
 ```
@@ -286,9 +270,8 @@ G28
 
 This time let the toolhead move to X and Y endstop automatically.
 
-:::danger
-You stil need to manually press the Z FSR endstop as the gantry moves down
-:::
+!! You stil need to manually press the Z FSR endstop as the gantry moves down
+
 
 Now that you are comfortable that X/Y is triggering we need to tune X-Max and Y-Max
 
@@ -303,9 +286,8 @@ You want the tool head as far to the front as possible without touching the fron
 
 Now that you have X and Y endstops configured you can configure the position of your FSR pin. See [Homing Override](#Homing-Override)
 
-:::danger
-Remember - if you ever make adjustments to your endstops or change the belts significantly you will need to adjust your endstop positions and update the position of the FSR pin in homing_override
-:::
+!! Remember - if you ever make adjustments to your endstops or change the belts significantly you will need to adjust your endstop positions and update the position of the FSR pin in homing_override
+
 
 
 ```
@@ -481,7 +463,7 @@ step_distance: 0.00250
 #   400 steps per mm - 1.8 deg - 1/16 microstepping
 ```
 
-### Extruder Settings
+### Extruder Settings <a id="Extruder-Settings"></a>
 ```
 [extruder]
 step_pin: ar26
