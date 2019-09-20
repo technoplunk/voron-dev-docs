@@ -23,13 +23,13 @@ All information collected here is currently non-offical and subject to change!
 
 Links
 ---
-- [FAQ](https://hackmd.io/P_XMpxHGRCe9__FdwCZJsg)
-- [Mechanics](https://hackmd.io/-Zgitmj2TwKtQzoedzPIVw)
-- [Electronics](https://hackmd.io/q0S1yyxiSnu9VP2jVEHV7w)
-- [Klipper](https://hackmd.io/EROaLkSjSqaKzFZkPuqZxg)
-- [Manual Errata](https://hackmd.io/ej9YJYuDRgKU3fMNmbGi_g)
-- [Preflight Checklist](https://hackmd.io/iR6eD1XZTDS5dpKilpRUtQ)
-- [Calibration](https://hackmd.io/iOSF7FGuRg-h8lx77XTsqQ)
-- [Troubleshooting](https://hackmd.io/uRbAIpFtT3uDox42aL9djw)
-- [Photo tour of printer](https://hackmd.io/sDqmliAIRRyFXOnwiq8Rng)
+- [FAQ](https://www.voron.dev/home/voron-2-1/faq)
+- [Mechanics](https://www.voron.dev/home/voron-2-1/mechanics)
+- [Electronics](https://www.voron.dev/home/voron-2-1/electronics)
+- [Klipper](https://www.voron.dev/home/voron-2-1/klipper)
+- [Manual Errata](https://www.voron.dev/home/voron-2-1/2-1-manual-errata)
+- [Preflight Checklist](https://www.voron.dev/home/voron-2-1/preflight-checklist)
+- [Troubleshooting](https://www.voron.dev/home/voron-2-1/troubleshooting)
+- [Photo tour of printer](https://www.voron.dev/home/voron-2-1/photo-tour)
+- [Prints Showcase](https://www.voron.dev/home/voron-2-1/voron-showcase)
 ###### tags: `Voron`
