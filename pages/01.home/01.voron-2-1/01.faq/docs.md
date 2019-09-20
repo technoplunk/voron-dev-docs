@@ -57,7 +57,7 @@ There are no plans to support it until TL clones it
     * Supports are not required.
     * Recommended Infill Pattern is Fast Honeycomb in S3D, other valid infill is as follows: Gyroid, Cubic, Grid and Triangle.
 * Slicers
-    * Tested Slicers are as follows: S3D, Slic3r Prusa Edition, Cura
+    * Tested Slicers are as follows: S3D, Slic3r Prusa Edition, Cura, and KISSlicer.
     *  **We do not recommend using Pathio to slice your parts.**
 *  Filament
     *  Approved filament is either ABS or ABS+.
