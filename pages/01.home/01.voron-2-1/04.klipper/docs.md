@@ -39,18 +39,18 @@ Latest stock config is found on Github:
 ### Items you need to update
 
 Arduino paths                          [mcu](#MCU-definitions) section
- Thermistor types                      [extruder](https://www.voron.dev/home/voron-2-1/klipper#extruder-settings) and [heater_bed]() sections
+ Thermistor types                      [extruder](https://www.voron.dev/home/voron-2-1/klipper#extruder-settings) and [heater_bed](https://www.voron.dev/home/voron-2-1/klipper#heated-bed-settings) sections
  See 'sensor types' list at end of file
  
  FSR switch (z endstop) location       [homing_override](#Homing-Override) section
  FSR switch (z endstop) offset for Z0  [stepper_z]() section
  Probe points                          [quad_gantry_level](#Quad-Gantry-Levelling-Settings) section
  Min & Max gantry corner postions      [quad_gantry_level](#Quad-Gantry-Levelling-Settings) section
- PID tune                              [extruder](#Extruder-Settings) and [heater_bed](#Heated-Bed-Settings) sections
+ PID tune                              [extruder](#Extruder-Settings) and [heater_bed]https://www.voron.dev/home/voron-2-1/klipper#heated-bed-settings) sections
  Fine tune E steps                     [extruder](#Extruder-Settings) section
 
 
-### MCU definitions <a id="MCU-definitions"></a>
+### MCU definitions 
 
 Each RAMPS 1.4 board is placed onto an Arduino Mega controller. 
 When you install Klipper you will flash the Klipper code onto both Arduinos. We need to find the USB paths of your Arduinos and tell Klipper where to find them on startup. 
@@ -463,7 +463,7 @@ step_distance: 0.00250
 #   400 steps per mm - 1.8 deg - 1/16 microstepping
 ```
 
-### Extruder Settings <a id="Extruder-Settings"></a>
+### Extruder Settings 
 ```
 [extruder]
 step_pin: ar26
